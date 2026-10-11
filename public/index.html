@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAD AI</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">TAD AI</div>
+      <button class="new-chat" onclick="newChat()">＋ New chat</button>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        TAD AI <span style="color: #aaa">• Assistant</span>
+      </header>
+
+      <section id="chat" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <h1>What can I help with?</h1>
+          <p>Welcome to your own AI assistant.</p>
+        </div>
+      </section>
+
+      <footer class="bottom">
+        <div class="input-box">
+          <input
+            id="prompt"
+            placeholder="Message TAD AI..."
+            aria-label="Message TAD AI"
+            onkeydown="if(event.key === 'Enter') sendMessage()"
+          />
+          <button id="send" onclick="sendMessage()">Send ↑</button>
+        </div>
+        <div class="note">TAD AI prototype • Real AI responses enabled when API key is configured</div>
+      </footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
